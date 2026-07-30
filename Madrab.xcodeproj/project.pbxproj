@@ -1,0 +1,990 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA222F79301B564A00A6B1F5 /* Madrab Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FA222F78301B564A00A6B1F5 /* Madrab Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA222F63301B564A00A6B1F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA222F4D301B564800A6B1F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA222F54301B564800A6B1F5;
+			remoteInfo = Madrab;
+		};
+		FA222F6D301B564A00A6B1F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA222F4D301B564800A6B1F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA222F54301B564800A6B1F5;
+			remoteInfo = Madrab;
+		};
+		FA222F7A301B564A00A6B1F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA222F4D301B564800A6B1F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA222F77301B564A00A6B1F5;
+			remoteInfo = "Madrab Watch App";
+		};
+		FA222F88301B564B00A6B1F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA222F4D301B564800A6B1F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA222F77301B564A00A6B1F5;
+			remoteInfo = "Madrab Watch App";
+		};
+		FA222F92301B564B00A6B1F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA222F4D301B564800A6B1F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA222F77301B564A00A6B1F5;
+			remoteInfo = "Madrab Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FA222F9E301B564B00A6B1F5 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				FA222F79301B564A00A6B1F5 /* Madrab Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FA222F55301B564800A6B1F5 /* Madrab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Madrab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA222F62301B564A00A6B1F5 /* MadrabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MadrabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA222F6C301B564A00A6B1F5 /* MadrabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MadrabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA222F78301B564A00A6B1F5 /* Madrab Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Madrab Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA222F87301B564B00A6B1F5 /* Madrab Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Madrab Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA222F91301B564B00A6B1F5 /* Madrab Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Madrab Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		FA222F57301B564800A6B1F5 /* Madrab */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Madrab;
+			sourceTree = "<group>";
+		};
+		FA222F65301B564A00A6B1F5 /* MadrabTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MadrabTests;
+			sourceTree = "<group>";
+		};
+		FA222F6F301B564A00A6B1F5 /* MadrabUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MadrabUITests;
+			sourceTree = "<group>";
+		};
+		FA222F7C301B564A00A6B1F5 /* Madrab Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Madrab Watch App";
+			sourceTree = "<group>";
+		};
+		FA222F8A301B564B00A6B1F5 /* Madrab Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Madrab Watch AppTests";
+			sourceTree = "<group>";
+		};
+		FA222F94301B564B00A6B1F5 /* Madrab Watch AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Madrab Watch AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA222F52301B564800A6B1F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA222F5F301B564A00A6B1F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA222F69301B564A00A6B1F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA222F75301B564A00A6B1F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA222F84301B564B00A6B1F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA222F8E301B564B00A6B1F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA222F4C301B564800A6B1F5 = {
+			isa = PBXGroup;
+			children = (
+				FA222F57301B564800A6B1F5 /* Madrab */,
+				FA222F65301B564A00A6B1F5 /* MadrabTests */,
+				FA222F6F301B564A00A6B1F5 /* MadrabUITests */,
+				FA222F7C301B564A00A6B1F5 /* Madrab Watch App */,
+				FA222F8A301B564B00A6B1F5 /* Madrab Watch AppTests */,
+				FA222F94301B564B00A6B1F5 /* Madrab Watch AppUITests */,
+				FA222F56301B564800A6B1F5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA222F56301B564800A6B1F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA222F55301B564800A6B1F5 /* Madrab.app */,
+				FA222F62301B564A00A6B1F5 /* MadrabTests.xctest */,
+				FA222F6C301B564A00A6B1F5 /* MadrabUITests.xctest */,
+				FA222F78301B564A00A6B1F5 /* Madrab Watch App.app */,
+				FA222F87301B564B00A6B1F5 /* Madrab Watch AppTests.xctest */,
+				FA222F91301B564B00A6B1F5 /* Madrab Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA222F54301B564800A6B1F5 /* Madrab */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA222F9F301B564B00A6B1F5 /* Build configuration list for PBXNativeTarget "Madrab" */;
+			buildPhases = (
+				FA222F51301B564800A6B1F5 /* Sources */,
+				FA222F52301B564800A6B1F5 /* Frameworks */,
+				FA222F53301B564800A6B1F5 /* Resources */,
+				FA222F9E301B564B00A6B1F5 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA222F7B301B564A00A6B1F5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FA222F57301B564800A6B1F5 /* Madrab */,
+			);
+			name = Madrab;
+			packageProductDependencies = (
+			);
+			productName = Madrab;
+			productReference = FA222F55301B564800A6B1F5 /* Madrab.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA222F61301B564A00A6B1F5 /* MadrabTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA222FA2301B564B00A6B1F5 /* Build configuration list for PBXNativeTarget "MadrabTests" */;
+			buildPhases = (
+				FA222F5E301B564A00A6B1F5 /* Sources */,
+				FA222F5F301B564A00A6B1F5 /* Frameworks */,
+				FA222F60301B564A00A6B1F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA222F64301B564A00A6B1F5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FA222F65301B564A00A6B1F5 /* MadrabTests */,
+			);
+			name = MadrabTests;
+			packageProductDependencies = (
+			);
+			productName = MadrabTests;
+			productReference = FA222F62301B564A00A6B1F5 /* MadrabTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FA222F6B301B564A00A6B1F5 /* MadrabUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA222FA5301B564B00A6B1F5 /* Build configuration list for PBXNativeTarget "MadrabUITests" */;
+			buildPhases = (
+				FA222F68301B564A00A6B1F5 /* Sources */,
+				FA222F69301B564A00A6B1F5 /* Frameworks */,
+				FA222F6A301B564A00A6B1F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA222F6E301B564A00A6B1F5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FA222F6F301B564A00A6B1F5 /* MadrabUITests */,
+			);
+			name = MadrabUITests;
+			packageProductDependencies = (
+			);
+			productName = MadrabUITests;
+			productReference = FA222F6C301B564A00A6B1F5 /* MadrabUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		FA222F77301B564A00A6B1F5 /* Madrab Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA222F9B301B564B00A6B1F5 /* Build configuration list for PBXNativeTarget "Madrab Watch App" */;
+			buildPhases = (
+				FA222F74301B564A00A6B1F5 /* Sources */,
+				FA222F75301B564A00A6B1F5 /* Frameworks */,
+				FA222F76301B564A00A6B1F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FA222F7C301B564A00A6B1F5 /* Madrab Watch App */,
+			);
+			name = "Madrab Watch App";
+			packageProductDependencies = (
+			);
+			productName = "Madrab Watch App";
+			productReference = FA222F78301B564A00A6B1F5 /* Madrab Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA222F86301B564B00A6B1F5 /* Madrab Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA222FA8301B564B00A6B1F5 /* Build configuration list for PBXNativeTarget "Madrab Watch AppTests" */;
+			buildPhases = (
+				FA222F83301B564B00A6B1F5 /* Sources */,
+				FA222F84301B564B00A6B1F5 /* Frameworks */,
+				FA222F85301B564B00A6B1F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA222F89301B564B00A6B1F5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FA222F8A301B564B00A6B1F5 /* Madrab Watch AppTests */,
+			);
+			name = "Madrab Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "Madrab Watch AppTests";
+			productReference = FA222F87301B564B00A6B1F5 /* Madrab Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FA222F90301B564B00A6B1F5 /* Madrab Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA222FAB301B564B00A6B1F5 /* Build configuration list for PBXNativeTarget "Madrab Watch AppUITests" */;
+			buildPhases = (
+				FA222F8D301B564B00A6B1F5 /* Sources */,
+				FA222F8E301B564B00A6B1F5 /* Frameworks */,
+				FA222F8F301B564B00A6B1F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA222F93301B564B00A6B1F5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FA222F94301B564B00A6B1F5 /* Madrab Watch AppUITests */,
+			);
+			name = "Madrab Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "Madrab Watch AppUITests";
+			productReference = FA222F91301B564B00A6B1F5 /* Madrab Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA222F4D301B564800A6B1F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2660;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					FA222F54301B564800A6B1F5 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					FA222F61301B564A00A6B1F5 = {
+						CreatedOnToolsVersion = 26.6;
+						TestTargetID = FA222F54301B564800A6B1F5;
+					};
+					FA222F6B301B564A00A6B1F5 = {
+						CreatedOnToolsVersion = 26.6;
+						TestTargetID = FA222F54301B564800A6B1F5;
+					};
+					FA222F77301B564A00A6B1F5 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					FA222F86301B564B00A6B1F5 = {
+						CreatedOnToolsVersion = 26.6;
+						TestTargetID = FA222F77301B564A00A6B1F5;
+					};
+					FA222F90301B564B00A6B1F5 = {
+						CreatedOnToolsVersion = 26.6;
+						TestTargetID = FA222F77301B564A00A6B1F5;
+					};
+				};
+			};
+			buildConfigurationList = FA222F50301B564800A6B1F5 /* Build configuration list for PBXProject "Madrab" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA222F4C301B564800A6B1F5;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = FA222F56301B564800A6B1F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA222F54301B564800A6B1F5 /* Madrab */,
+				FA222F61301B564A00A6B1F5 /* MadrabTests */,
+				FA222F6B301B564A00A6B1F5 /* MadrabUITests */,
+				FA222F77301B564A00A6B1F5 /* Madrab Watch App */,
+				FA222F86301B564B00A6B1F5 /* Madrab Watch AppTests */,
+				FA222F90301B564B00A6B1F5 /* Madrab Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA222F53301B564800A6B1F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA222F60301B564A00A6B1F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA222F6A301B564A00A6B1F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA222F76301B564A00A6B1F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA222F85301B564B00A6B1F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA222F8F301B564B00A6B1F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA222F51301B564800A6B1F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA222F5E301B564A00A6B1F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA222F68301B564A00A6B1F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA222F74301B564A00A6B1F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA222F83301B564B00A6B1F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA222F8D301B564B00A6B1F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA222F64301B564A00A6B1F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA222F54301B564800A6B1F5 /* Madrab */;
+			targetProxy = FA222F63301B564A00A6B1F5 /* PBXContainerItemProxy */;
+		};
+		FA222F6E301B564A00A6B1F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA222F54301B564800A6B1F5 /* Madrab */;
+			targetProxy = FA222F6D301B564A00A6B1F5 /* PBXContainerItemProxy */;
+		};
+		FA222F7B301B564A00A6B1F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA222F77301B564A00A6B1F5 /* Madrab Watch App */;
+			targetProxy = FA222F7A301B564A00A6B1F5 /* PBXContainerItemProxy */;
+		};
+		FA222F89301B564B00A6B1F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA222F77301B564A00A6B1F5 /* Madrab Watch App */;
+			targetProxy = FA222F88301B564B00A6B1F5 /* PBXContainerItemProxy */;
+		};
+		FA222F93301B564B00A6B1F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA222F77301B564A00A6B1F5 /* Madrab Watch App */;
+			targetProxy = FA222F92301B564B00A6B1F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FA222F99301B564B00A6B1F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA222F9A301B564B00A6B1F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		FA222F9C301B564B00A6B1F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Madrab;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.zuhair.Madrab;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zuhair.Madrab.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.5;
+			};
+			name = Debug;
+		};
+		FA222F9D301B564B00A6B1F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Madrab;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.zuhair.Madrab;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zuhair.Madrab.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.5;
+			};
+			name = Release;
+		};
+		FA222FA0301B564B00A6B1F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Madrab;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zuhair.Madrab;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA222FA1301B564B00A6B1F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Madrab;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zuhair.Madrab;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA222FA3301B564B00A6B1F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zuhair.MadrabTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Madrab.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Madrab";
+			};
+			name = Debug;
+		};
+		FA222FA4301B564B00A6B1F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zuhair.MadrabTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Madrab.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Madrab";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA222FA6301B564B00A6B1F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zuhair.MadrabUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Madrab;
+			};
+			name = Debug;
+		};
+		FA222FA7301B564B00A6B1F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zuhair.MadrabUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Madrab;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA222FA9301B564B00A6B1F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zuhair.Madrab-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Madrab Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Madrab Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 26.5;
+			};
+			name = Debug;
+		};
+		FA222FAA301B564B00A6B1F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zuhair.Madrab-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Madrab Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Madrab Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.5;
+			};
+			name = Release;
+		};
+		FA222FAC301B564B00A6B1F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zuhair.Madrab-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Madrab Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 26.5;
+			};
+			name = Debug;
+		};
+		FA222FAD301B564B00A6B1F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zuhair.Madrab-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Madrab Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA222F50301B564800A6B1F5 /* Build configuration list for PBXProject "Madrab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA222F99301B564B00A6B1F5 /* Debug */,
+				FA222F9A301B564B00A6B1F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA222F9B301B564B00A6B1F5 /* Build configuration list for PBXNativeTarget "Madrab Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA222F9C301B564B00A6B1F5 /* Debug */,
+				FA222F9D301B564B00A6B1F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA222F9F301B564B00A6B1F5 /* Build configuration list for PBXNativeTarget "Madrab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA222FA0301B564B00A6B1F5 /* Debug */,
+				FA222FA1301B564B00A6B1F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA222FA2301B564B00A6B1F5 /* Build configuration list for PBXNativeTarget "MadrabTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA222FA3301B564B00A6B1F5 /* Debug */,
+				FA222FA4301B564B00A6B1F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA222FA5301B564B00A6B1F5 /* Build configuration list for PBXNativeTarget "MadrabUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA222FA6301B564B00A6B1F5 /* Debug */,
+				FA222FA7301B564B00A6B1F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA222FA8301B564B00A6B1F5 /* Build configuration list for PBXNativeTarget "Madrab Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA222FA9301B564B00A6B1F5 /* Debug */,
+				FA222FAA301B564B00A6B1F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA222FAB301B564B00A6B1F5 /* Build configuration list for PBXNativeTarget "Madrab Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA222FAC301B564B00A6B1F5 /* Debug */,
+				FA222FAD301B564B00A6B1F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA222F4D301B564800A6B1F5 /* Project object */;
+}
