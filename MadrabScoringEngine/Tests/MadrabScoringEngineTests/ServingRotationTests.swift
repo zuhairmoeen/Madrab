@@ -79,4 +79,47 @@ struct ServingRotationTests {
         #expect(state.servingTeam == .teamA)
         #expect(state.servingPlayer == ServingPlayer(team: .teamA, position: .first))
     }
+
+    /// The serving team must flip after every completed game, independent of
+    /// who wins the points in that game.
+    @Test func servingTeamAlternatesEveryCompletedGame() throws {
+        let configuration = try MatchConfiguration()
+        var engine = MatchEngine(configuration: configuration)
+
+        #expect(engine.state.servingTeam == .teamA)
+
+        submitAll(straightPoints(.teamA, count: 4), to: &engine)
+        #expect(engine.state.servingTeam == .teamB)
+
+        submitAll(straightPoints(.teamB, count: 4), to: &engine)
+        #expect(engine.state.servingTeam == .teamA)
+    }
+
+    /// Within a team, the specific serving player alternates across that
+    /// team's own successive service games.
+    @Test func servingPlayerAlternatesAcrossOwnServiceGames() throws {
+        let configuration = try MatchConfiguration(servingPlayerTrackingEnabled: true)
+        var engine = MatchEngine(configuration: configuration)
+
+        submitAll(straightPoints(.teamA, count: 4), to: &engine)  // game 1: teamA serves, .first
+        submitAll(straightPoints(.teamB, count: 4), to: &engine)  // game 2: teamB serves, .first
+
+        // teamA's 2nd service turn (index 1, odd) -> .second.
+        #expect(engine.state.servingTeam == .teamA)
+        #expect(engine.state.servingPlayer == ServingPlayer(team: .teamA, position: .second))
+    }
+
+    /// When tracking is disabled, `servingPlayer` must stay `nil` throughout.
+    @Test func servingPlayerStaysNilWhenTrackingDisabled() throws {
+        let configuration = try MatchConfiguration(
+            servingPlayerTrackingEnabled: false
+        )
+        var engine = MatchEngine(configuration: configuration)
+
+        #expect(engine.state.servingPlayer == nil)
+
+        submitAll(straightPoints(.teamA, count: 4), to: &engine)
+
+        #expect(engine.state.servingPlayer == nil)
+    }
 }

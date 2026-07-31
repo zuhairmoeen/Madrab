@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FA222F79301B564A00A6B1F5 /* Madrab Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FA222F78301B564A00A6B1F5 /* Madrab Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AB10000000000000000A0004 /* MadrabScoringEngine in Frameworks */ = {isa = PBXBuildFile; productRef = AB10000000000000000A0002 /* MadrabScoringEngine */; };
+		AB10000000000000000A0005 /* MadrabScoringEngine in Frameworks */ = {isa = PBXBuildFile; productRef = AB10000000000000000A0003 /* MadrabScoringEngine */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB10000000000000000A0004 /* MadrabScoringEngine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB10000000000000000A0005 /* MadrabScoringEngine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +202,7 @@
 			);
 			name = Madrab;
 			packageProductDependencies = (
+				AB10000000000000000A0002 /* MadrabScoringEngine */,
 			);
 			productName = Madrab;
 			productReference = FA222F55301B564800A6B1F5 /* Madrab.app */;
@@ -266,6 +271,7 @@
 			);
 			name = "Madrab Watch App";
 			packageProductDependencies = (
+				AB10000000000000000A0003 /* MadrabScoringEngine */,
 			);
 			productName = "Madrab Watch App";
 			productReference = FA222F78301B564A00A6B1F5 /* Madrab Watch App.app */;
@@ -360,6 +366,9 @@
 			);
 			mainGroup = FA222F4C301B564800A6B1F5;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				AB10000000000000000A0001 /* XCLocalSwiftPackageReference "MadrabScoringEngine" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = FA222F56301B564800A6B1F5 /* Products */;
 			projectDirPath = "";
@@ -985,6 +994,26 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		AB10000000000000000A0001 /* XCLocalSwiftPackageReference "MadrabScoringEngine" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = MadrabScoringEngine;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AB10000000000000000A0002 /* MadrabScoringEngine */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB10000000000000000A0001 /* XCLocalSwiftPackageReference "MadrabScoringEngine" */;
+			productName = MadrabScoringEngine;
+		};
+		AB10000000000000000A0003 /* MadrabScoringEngine */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB10000000000000000A0001 /* XCLocalSwiftPackageReference "MadrabScoringEngine" */;
+			productName = MadrabScoringEngine;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA222F4D301B564800A6B1F5 /* Project object */;
 }
