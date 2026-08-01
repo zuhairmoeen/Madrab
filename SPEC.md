@@ -1,4 +1,4 @@
-# Madrab — Milestone 1 Specification
+# Madrab — Specification
 
 ## Product
 
@@ -6,7 +6,7 @@ Madrab is a padel scoring application for iPhone and Apple Watch.
 
 The complete product will eventually allow players to score padel matches from either device, work offline, restore interrupted matches, save results, and start rematches.
 
-This specification covers Milestone 1 only.
+This specification covers Milestone 1 (complete) and Milestone 2.
 
 ## Milestone 1 objective
 
@@ -168,3 +168,99 @@ Do not implement:
 * Court booking
 * Payments
 * Other sports
+
+## Milestone 2 objective
+
+Build a SwiftUI iPhone prototype, in the existing `Madrab` app target, that uses `MadrabScoringEngine` to create, run, display, undo, restore, and finish a live padel match entirely on one iPhone.
+
+Milestone 2 has no networking, no second device, and no cloud services.
+
+## Required prototype behavior
+
+The prototype must let a user:
+
+* Create a new match with configurable rules.
+* Run a live match by recording scoring events through `MadrabScoringEngine`.
+* View derived match state as it changes.
+* Undo the most recent effective scoring action.
+* Finish a match and see the final result.
+
+## Persistence requirements
+
+* Persist the current match configuration and scoring-event log locally as Codable JSON.
+* Support only one active match at a time.
+* Reconstruct `MatchEngine` and `MatchState` through deterministic replay of the persisted event log when the app relaunches.
+* Clear persisted match data when the match is deliberately discarded or completed.
+* Do not use a database.
+* Do not sync persisted data to the cloud.
+* Do not build a match-history library.
+
+## Milestone 2 architecture requirements
+
+* The prototype must use `MadrabScoringEngine` as its sole source of scoring logic.
+* The prototype must not modify `MadrabScoringEngine`'s public API.
+* The prototype must not add third-party dependencies.
+* Match state displayed in the UI must be derived from the engine's replay, not tracked separately.
+
+## Required tests (Milestone 2)
+
+### Persistence
+
+* Save match configuration and event log after each scoring event
+* Round-trip Codable encode/decode of match configuration and event log
+* Restore in-progress match after relaunch via replay
+* No persisted match on first launch
+
+### Lifecycle
+
+* Clear persisted data when a match is deliberately discarded
+* Clear persisted data when a match is completed
+* Only one active match persisted at a time
+
+### UI-to-engine wiring
+
+* Creating a match produces a valid `MatchEngine` configuration
+* Recording a scoring action calls the engine and updates displayed state
+* Undo calls the engine's undo API and updates displayed state
+* Finishing a match reflects the engine's terminal state
+
+## Milestone 2 completion criteria
+
+Milestone 2 is complete only when:
+
+1. The iPhone app builds.
+2. A user can create, run, undo, restore, and finish a match entirely within the app.
+3. An in-progress match survives app termination and relaunch via replay of persisted events.
+4. Persisted match data is Codable JSON only, with no database.
+5. Persisted data is cleared when a match is discarded or completed.
+6. No networking, authentication, cloud sync, Watch Connectivity, authority transfer, or Apple Watch UI is present.
+7. No third-party dependencies were added.
+8. The `MadrabScoringEngine` package and its tests still build and pass unmodified.
+9. Unresolved UI or persistence decisions are documented honestly.
+
+## Milestone 2 out of scope
+
+Do not implement:
+
+* Apple Watch UI
+* Watch Connectivity
+* Networking
+* Authentication
+* Cloud sync
+* Authority transfer
+* Device synchronization
+* Conflict recovery
+* Supabase
+* Accounts
+* Player profiles
+* Ratings
+* Leaderboards
+* Matchmaking
+* Court booking
+* Payments
+* Other sports
+* Third-party dependencies
+* Haptics
+* Animations
+* Database storage
+* Match-history library

@@ -1,10 +1,14 @@
-# CLAUDE.md — Madrab Milestone 1
+# CLAUDE.md — Madrab
 
 ## Project
 
 Madrab is a native Swift and SwiftUI padel scoring application for iPhone and Apple Watch.
 
-The current development scope is Milestone 1 only: a headless Swift package containing the padel scoring engine and its automated tests.
+Milestone 1, the headless `MadrabScoringEngine` Swift package and its automated tests, is complete.
+
+The current development scope is Milestone 2: a SwiftUI iPhone prototype built in the existing `Madrab` app target. It must use `MadrabScoringEngine` to create, run, display, undo, restore, and finish a live match entirely on one iPhone.
+
+Milestone 2 must not add networking, authentication, cloud sync, WatchConnectivity, authority transfer, or Apple Watch UI.
 
 Always read `SPEC.md` before planning or modifying code.
 
@@ -28,21 +32,40 @@ Do not claim that a build or test passed unless it was actually run.
 
 ## Current scope
 
-Implement only the Milestone 1 scoring engine.
+Implement only the Milestone 2 iPhone prototype.
 
-The engine must:
+The prototype must:
 
-* Be written in Swift.
-* Live in a Swift package.
-* Be platform-independent.
-* Use immutable events.
-* Derive state through deterministic replay.
-* Support the scoring rules in `SPEC.md`.
-* Reject duplicate event IDs.
-* Validate invalid sequences.
-* Support restricted undo-by-reference.
-* Include comprehensive Swift Testing tests.
-* Have a small and explicit public API.
+* Be written in Swift and SwiftUI.
+* Live in the existing `Madrab` iPhone app target.
+* Use `MadrabScoringEngine` as the sole source of scoring logic.
+* Let a user create a new match with configurable rules.
+* Let a user run a live match by recording scoring events.
+* Display derived match state as it changes.
+* Let a user undo the most recent effective scoring action.
+* Persist the current match configuration and scoring-event log locally as Codable JSON.
+* Reconstruct `MatchEngine` and `MatchState` through deterministic replay of the persisted event log on launch.
+* Let a user finish a match and see the final result.
+* Clear persisted match data when the match is deliberately discarded or completed, according to the approved UI flow.
+* Operate entirely on one iPhone, with no second device involved.
+
+Persistence must be minimal:
+
+* Support only one active match at a time.
+* Store data as Codable JSON on local disk.
+* Do not use a database.
+* Do not sync to the cloud.
+* Do not build a match-history library.
+
+Milestone 2 must not add:
+
+* Networking
+* Authentication
+* Cloud sync
+* Watch Connectivity
+* Authority transfer
+* Apple Watch UI
+* Third-party dependencies
 
 ## Architecture rules
 
@@ -91,12 +114,11 @@ Do not delete, weaken, or skip failing tests merely to make the test suite pass.
 
 Do not implement or modify product code for:
 
-* SwiftUI interfaces
-* iPhone scoring screens
 * Apple Watch scoring screens
 * Haptics
 * Animations
-* Local application persistence
+* Database storage
+* Match-history libraries
 * Watch Connectivity
 * Device authority
 * Authority transfer
@@ -119,17 +141,15 @@ Do not refactor unrelated Xcode-generated files.
 
 Before implementation, produce a file-level plan covering:
 
-* Swift package structure
-* Domain types
-* Event types
-* Match configuration
-* Derived match state
-* Replay algorithm
-* Validation
-* Undo behavior
-* Serving rules
-* Public API
-* Error types
+* SwiftUI view structure
+* State/view-model structure
+* Match-creation flow
+* Live-scoring flow
+* Undo flow
+* Persistence model (Codable schema, save/load/clear points)
+* Restore-on-launch flow
+* Match-finish flow
+* Error and edge-case handling
 * Test structure
 * Detailed test matrix
 * Exact files to create or modify

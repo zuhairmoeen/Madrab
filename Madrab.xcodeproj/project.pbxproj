@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA222F79301B564A00A6B1F5 /* Madrab Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FA222F78301B564A00A6B1F5 /* Madrab Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AB10000000000000000A0004 /* MadrabScoringEngine in Frameworks */ = {isa = PBXBuildFile; productRef = AB10000000000000000A0002 /* MadrabScoringEngine */; };
 		AB10000000000000000A0005 /* MadrabScoringEngine in Frameworks */ = {isa = PBXBuildFile; productRef = AB10000000000000000A0003 /* MadrabScoringEngine */; };
+		FA222F79301B564A00A6B1F5 /* Madrab Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FA222F78301B564A00A6B1F5 /* Madrab Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
