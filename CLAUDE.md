@@ -12,6 +12,10 @@ The current development scope is Milestone 3: local player profiles, a points/le
 
 Milestone 3 must not add networking, authentication, cloud sync, WatchConnectivity, authority transfer, Apple Watch UI, or skill-rating algorithms (ELO/Glicko/MMR). The points system is a simple, swappable win/loss tally, not a rating system.
 
+Milestone 3's automated verification (188 tests across `MadrabTests` and `MadrabScoringEngine`, full simulator build) is complete and passing. Sign-off is pending the project owner's own manual pass through the interactive checklist in SPEC.md before Milestone 3 is marked complete.
+
+The next planned milestone after Milestone 3 is incorporating user feedback and suggestions. That milestone is not yet scoped and must not be implemented until explicitly requested.
+
 Always read `SPEC.md` before planning or modifying code.
 
 ## Required working process

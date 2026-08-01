@@ -1,17 +1,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var session = MatchSessionViewModel()
+    let session: MatchSessionViewModel
+    let profilesViewModel: ProfilesViewModel
 
     var body: some View {
         Group {
             switch session.phase {
             case .setup:
-                MatchSetupView { configuration, teamALabel, teamBLabel in
+                MatchSetupView(profilesViewModel: profilesViewModel) { configuration, teamAProfile, teamBProfile in
                     session.startMatch(
                         configuration: configuration,
-                        teamALabel: teamALabel,
-                        teamBLabel: teamBLabel
+                        teamAProfile: teamAProfile,
+                        teamBProfile: teamBProfile
                     )
                 }
 
@@ -33,5 +34,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView(session: MatchSessionViewModel(), profilesViewModel: ProfilesViewModel())
 }

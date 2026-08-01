@@ -11,7 +11,7 @@ import SwiftUI
 struct MadrabApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootTabView()
         }
     }
 }

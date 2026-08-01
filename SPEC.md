@@ -347,6 +347,30 @@ The app must let a user:
 * An in-progress active match present before this feature still restores correctly after adding profiles/points persistence
 * Schema version is recorded and readable on load
 
+## Milestone 3 verification status
+
+Automated verification is complete and passing: all 123 `MadrabTests`, all 65 `MadrabScoringEngine` tests, and a full iPhone 17 simulator build, with no warnings from project code. The interactive manual checklist below (profile creation/edit/delete through the UI, picking profiles and starting a match, live scoring/undo/discard/finish by tapping, tab-switch behavior mid-match, and a real quit/relaunch restore) is pending the project owner's own hands-on pass in the simulator. Milestone 3 is marked complete only once that pass is done.
+
+### Manual verification checklist
+
+* Empty Profiles state
+* Create two profiles
+* Edit a profile name
+* Duplicate/blank names rejected
+* Match tab immediately sees the shared profiles
+* Same profile cannot be selected for both sides
+* Start a match with two profiles
+* Scoring, undo, discard, restore, and finish still work
+* Completed match awards winner 3 points and loser 1 point
+* Leaderboard updates after completion
+* Leaderboard rank and statistics are correct
+* Profile rename is reflected in Match and Leaderboard
+* Active-match profile deletion is blocked
+* Deleting an inactive profile removes its leaderboard row/stats
+* Switching tabs does not reset the active match
+* Relaunch restores an unfinished match
+* Light and dark mode remain readable
+
 ## Milestone 3 completion criteria
 
 Milestone 3 is complete only when:
@@ -387,3 +411,7 @@ Do not implement:
 * Animations
 * Database storage
 * Browsable match-history library
+
+## Milestone 4 (planned, not yet scoped)
+
+The next planned milestone after Milestone 3 is incorporating user feedback and suggestions. No objective, requirements, or architecture for Milestone 4 exist yet, and none should be implemented until it is explicitly scoped and requested.
