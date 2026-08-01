@@ -6,9 +6,11 @@ Madrab is a native Swift and SwiftUI padel scoring application for iPhone and Ap
 
 Milestone 1, the headless `MadrabScoringEngine` Swift package and its automated tests, is complete.
 
-The current development scope is Milestone 2: a SwiftUI iPhone prototype built in the existing `Madrab` app target. It must use `MadrabScoringEngine` to create, run, display, undo, restore, and finish a live match entirely on one iPhone.
+Milestone 2, the SwiftUI iPhone prototype (create/run/undo/restore/finish a live match, with local Codable-JSON persistence of the active match), is complete.
 
-Milestone 2 must not add networking, authentication, cloud sync, WatchConnectivity, authority transfer, or Apple Watch UI.
+The current development scope is Milestone 3: local player profiles, a points/leaderboard system, and simple navigation between Match, Profiles, and Leaderboard — still entirely on one iPhone, still no accounts or cloud backend.
+
+Milestone 3 must not add networking, authentication, cloud sync, WatchConnectivity, authority transfer, Apple Watch UI, or skill-rating algorithms (ELO/Glicko/MMR). The points system is a simple, swappable win/loss tally, not a rating system.
 
 Always read `SPEC.md` before planning or modifying code.
 
@@ -32,40 +34,57 @@ Do not claim that a build or test passed unless it was actually run.
 
 ## Current scope
 
-Implement only the Milestone 2 iPhone prototype.
+Implement only the Milestone 3 local profiles, points, and leaderboard system, on top of the completed Milestone 2 match flow. Always read `SPEC.md` before planning or modifying code.
 
-The prototype must:
+## Profiles
 
-* Be written in Swift and SwiftUI.
-* Live in the existing `Madrab` iPhone app target.
-* Use `MadrabScoringEngine` as the sole source of scoring logic.
-* Let a user create a new match with configurable rules.
-* Let a user run a live match by recording scoring events.
-* Display derived match state as it changes.
-* Let a user undo the most recent effective scoring action.
-* Persist the current match configuration and scoring-event log locally as Codable JSON.
-* Reconstruct `MatchEngine` and `MatchState` through deterministic replay of the persisted event log on launch.
-* Let a user finish a match and see the final result.
-* Clear persisted match data when the match is deliberately discarded or completed, according to the approved UI flow.
-* Operate entirely on one iPhone, with no second device involved.
+* Let a user create, edit, and delete local player profiles.
+* Require a display name per profile.
+* Allow an optional profile image, with a generated initials/avatar fallback when none is set.
+* Show a Profiles screen listing all saved players.
+* Require selecting two different player profiles before a match can start.
+* Replace the free-text Team A / Team B name fields with the two selected profiles.
 
-Persistence must be minimal:
+## Points
 
-* Support only one active match at a time.
-* Store data as Codable JSON on local disk.
-* Do not use a database.
-* Do not sync to the cloud.
-* Do not build a match-history library.
+* Award ranking points only when a match reaches its terminal finished state — never for a discarded or still-in-progress match.
+* Track, per profile: total points, matches played, wins, losses.
+* Use an initial formula of winner = 3 points, loser = 1 point.
+* Implement the formula behind a single swappable unit so it can change later without touching call sites or stored data shape.
+* Be idempotent: the same completed match must never award points more than once, including across relaunches.
 
-Milestone 2 must not add:
+## Leaderboard
+
+* Show a ranked list of profiles with completed-match statistics.
+* Rank by total points, breaking ties by wins, then by matches played.
+* Display rank, name/avatar, points, wins, losses, and matches played per row.
+* Show a clear empty state when no completed matches exist yet.
+* Reflect a completed match immediately, with no separate refresh step.
+
+## Navigation
+
+* Add a simple top-level structure (a `TabView` unless the existing architecture suggests a better native SwiftUI structure) with three destinations: Match, Profiles, Leaderboard.
+* Preserve the existing polished Madrab visual style and single accent color.
+
+## Persistence
+
+* Store profiles, completed-match results, and leaderboard statistics locally as Codable JSON, alongside — not replacing — the existing active-match persistence.
+* Preserve the existing active-match restore-on-launch behavior exactly; this work must never corrupt or discard an in-progress match.
+* Handle installs with no profiles/points data yet (pre-Milestone-3) safely as an empty, non-error state.
+* Define an explicit schema-version / migration strategy for the persisted data format.
+* Do not use a database. Do not sync to the cloud.
+* Do not build a browsable match-history feature — only the minimal record needed to guarantee idempotent point-awarding.
+
+## Milestone 3 out of scope
 
 * Networking
-* Authentication
+* Authentication or accounts
 * Cloud sync
 * Watch Connectivity
 * Authority transfer
 * Apple Watch UI
 * Third-party dependencies
+* Skill-rating algorithms (ELO/Glicko/MMR)
 
 ## Architecture rules
 
@@ -118,22 +137,21 @@ Do not implement or modify product code for:
 * Haptics
 * Animations
 * Database storage
-* Match-history libraries
 * Watch Connectivity
 * Device authority
 * Authority transfer
 * Synchronization
 * Conflict recovery
 * Supabase
-* Authentication
-* Profiles
-* Ratings
-* Leaderboards
+* Authentication or accounts
+* Skill-rating algorithms (ELO/Glicko/MMR) — distinct from the simple Milestone 3 points tally, which is in scope
 * Friends
 * Matchmaking
 * Court features
 * Payments
 * Other sports
+
+A minimal, non-browsable record needed to guarantee idempotent point-awarding is in scope; a browsable match-history library is not.
 
 Do not refactor unrelated Xcode-generated files.
 

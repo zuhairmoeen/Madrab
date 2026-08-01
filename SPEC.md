@@ -6,7 +6,7 @@ Madrab is a padel scoring application for iPhone and Apple Watch.
 
 The complete product will eventually allow players to score padel matches from either device, work offline, restore interrupted matches, save results, and start rematches.
 
-This specification covers Milestone 1 (complete) and Milestone 2.
+This specification covers Milestone 1 (complete), Milestone 2 (complete), and Milestone 3.
 
 ## Milestone 1 objective
 
@@ -145,7 +145,7 @@ Milestone 1 is complete only when:
 9. The existing iPhone and Watch targets still build.
 10. Unresolved scoring decisions are documented honestly.
 
-## Out of scope
+## Milestone 1 out of scope
 
 Do not implement:
 
@@ -264,3 +264,126 @@ Do not implement:
 * Animations
 * Database storage
 * Match-history library
+
+## Milestone 3 objective
+
+Build local player profiles, a points/leaderboard system, and simple top-level navigation, entirely on one iPhone with no accounts or cloud backend, using the existing Milestone 2 match flow and `MadrabScoringEngine` unmodified.
+
+## Required profile behavior
+
+The app must let a user:
+
+* Create a local player profile with a required display name.
+* Attach an optional profile image, falling back to generated initials when none is set.
+* Edit or delete an existing profile.
+* View a Profiles screen listing all saved players.
+* Select two different player profiles before starting a match; the match's Team A / Team B are these profiles, replacing free-text name entry.
+
+## Required points behavior
+
+* Points are awarded only when a match reaches its terminal finished state via the existing Finish Match flow — never for a discarded or still-in-progress match.
+* Track, per profile: total points, matches played, wins, losses.
+* Initial formula: winner earns 3 points, loser earns 1 point.
+* The formula must be implemented behind a single swappable unit (e.g. a dedicated points-formula type or function) so it can change later without touching call sites or stored data shape.
+* Awarding points for a given completed match must be idempotent — the same match result must never be applied twice, including across relaunches after an interruption mid-write.
+
+## Required leaderboard behavior
+
+* A Leaderboard screen ranks all profiles with at least one recorded statistic.
+* Sort key: total points descending, then wins descending, then matches played descending.
+* Each row shows: rank, player name and avatar, points, wins, losses, matches played.
+* An explicit empty state is shown when no completed matches exist yet.
+* The leaderboard reflects a newly completed match immediately, without requiring the user to leave and return to the screen.
+
+## Migration and persistence requirements
+
+* Profiles, completed-match results, and leaderboard statistics are stored locally as Codable JSON, alongside — not replacing — the existing active-match persistence file.
+* The existing active-match restore-on-launch behavior (Milestone 2) must continue to work unchanged; this work must never corrupt or discard an in-progress match.
+* Persisted data must carry an explicit schema version. On launch, data written before Milestone 3 (no profiles/points files present) must be treated as a valid empty state — not an error, not a crash, not a reason to discard the active match.
+* No database. No cloud sync.
+* No browsable match-history feature — only the minimal record needed to guarantee idempotent point-awarding.
+
+## Milestone 3 architecture requirements
+
+* Do not modify `MadrabScoringEngine`'s scoring rules or public API.
+* Points/leaderboard state is derived from stored completed-match results, not tracked as an independently mutable running total that could drift from that history.
+* No third-party dependencies.
+
+## Required tests (Milestone 3)
+
+### Profiles
+
+* Create profile with required display name
+* Reject/validate a profile with a blank display name
+* Edit an existing profile's name/avatar
+* Delete a profile
+* Generated-initials fallback when no image is set
+
+### Match creation with profiles
+
+* Starting a match requires two distinct selected profiles
+* Selecting the same profile for both sides is rejected
+* Team A / Team B in the resulting match map to the selected profiles
+
+### Points
+
+* Winner receives 3 points, loser receives 1 point, on a completed match
+* No points are awarded when a match is discarded
+* No points are awarded while a match is still in progress
+* Points are not awarded twice for the same completed match (idempotency), including simulated relaunch
+* Per-profile matches played / wins / losses update correctly
+
+### Leaderboard
+
+* Ranking order by points, then wins, then matches played
+* Tie-break ordering with equal points and equal wins
+* Empty-state display with zero completed matches
+* Leaderboard reflects a match completed in the same session immediately
+
+### Persistence and migration
+
+* Profiles/points data round-trips through Codable JSON
+* Launching with no existing profiles/points file produces empty (not crashing) state
+* An in-progress active match present before this feature still restores correctly after adding profiles/points persistence
+* Schema version is recorded and readable on load
+
+## Milestone 3 completion criteria
+
+Milestone 3 is complete only when:
+
+1. The iPhone app builds.
+2. A user can create, edit, and delete player profiles.
+3. A match cannot start without two distinct selected profiles.
+4. Completed matches award points exactly once, using the swappable formula.
+5. The leaderboard ranks correctly and updates immediately after a completed match.
+6. The existing active-match persistence and restore-on-launch behavior (Milestone 2) is unchanged and unbroken.
+7. All persisted data is Codable JSON with an explicit schema version, with no database.
+8. No networking, authentication/accounts, cloud sync, Watch Connectivity, authority transfer, or Apple Watch UI is present.
+9. No third-party dependencies were added.
+10. The `MadrabScoringEngine` package and its tests still build and pass unmodified.
+11. Unresolved UI or persistence decisions are documented honestly.
+
+## Milestone 3 out of scope
+
+Do not implement:
+
+* Apple Watch UI
+* Watch Connectivity
+* Networking
+* Authentication or accounts
+* Cloud sync
+* Authority transfer
+* Device synchronization
+* Conflict recovery
+* Supabase
+* Skill-rating algorithms (ELO/Glicko/MMR)
+* Friends
+* Matchmaking
+* Court booking
+* Payments
+* Other sports
+* Third-party dependencies
+* Haptics
+* Animations
+* Database storage
+* Browsable match-history library
