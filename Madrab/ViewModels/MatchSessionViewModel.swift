@@ -15,6 +15,11 @@ final class MatchSessionViewModel {
     private(set) var teamBLabel = "Team B"
 
     private var engine: MatchEngine?
+    private let store: MatchStore
+
+    init(store: MatchStore = MatchStore()) {
+        self.store = store
+    }
 
     var state: MatchState? {
         switch phase {
@@ -50,6 +55,7 @@ final class MatchSessionViewModel {
         let newEngine = MatchEngine(configuration: configuration)
         engine = newEngine
         phase = .live(newEngine.state)
+        persist()
     }
 
     func recordPoint(for team: Team) {
@@ -57,6 +63,7 @@ final class MatchSessionViewModel {
         _ = engine.submit(.pointWon(PointWonEvent(winningTeam: team)))
         self.engine = engine
         phase = .live(engine.state)
+        persist()
     }
 
     func undoLastEffectivePoint() {
@@ -66,6 +73,7 @@ final class MatchSessionViewModel {
         _ = engine.submit(.undo(UndoEvent(targetEventID: targetID)))
         self.engine = engine
         phase = .live(engine.state)
+        persist()
     }
 
     func finishMatch() {
@@ -73,6 +81,7 @@ final class MatchSessionViewModel {
         _ = engine.submit(.finishMatch(FinishMatchEvent()))
         self.engine = engine
         phase = .finished(winner)
+        store.clear()
     }
 
     func returnToSetup() {
@@ -80,6 +89,38 @@ final class MatchSessionViewModel {
         teamALabel = "Team A"
         teamBLabel = "Team B"
         phase = .setup
+        store.clear()
+    }
+
+    /// Attempts to restore a persisted in-progress match. If the saved data
+    /// is missing, unreadable, invalid, or cannot be replayed, the persisted
+    /// file is discarded and the session is left at `.setup`.
+    func restoreIfNeeded() {
+        guard let persisted = store.load() else { return }
+
+        guard let restoredEngine = try? MatchEngine(
+            configuration: persisted.configuration,
+            events: persisted.events
+        ), !restoredEngine.state.isTerminal else {
+            store.clear()
+            return
+        }
+
+        engine = restoredEngine
+        teamALabel = persisted.teamALabel
+        teamBLabel = persisted.teamBLabel
+        phase = .live(restoredEngine.state)
+    }
+
+    private func persist() {
+        guard let engine else { return }
+        let match = PersistedMatch(
+            configuration: engine.configuration,
+            events: engine.events,
+            teamALabel: teamALabel,
+            teamBLabel: teamBLabel
+        )
+        try? store.save(match)
     }
 
     static func lastEffectivePointID(in events: [ScoringEvent]) -> EventID? {

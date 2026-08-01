@@ -4,6 +4,8 @@ import MadrabScoringEngine
 struct LiveMatchView: View {
     let session: MatchSessionViewModel
 
+    @State private var showingDiscardConfirmation = false
+
     var body: some View {
         VStack(spacing: 0) {
             scoreboardHeader
@@ -47,8 +49,8 @@ struct LiveMatchView: View {
         }
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
-                Button("Back") {
-                    session.returnToSetup()
+                Button("Discard") {
+                    showingDiscardConfirmation = true
                 }
             }
             ToolbarItem(placement: .topBarTrailing) {
@@ -56,6 +58,14 @@ struct LiveMatchView: View {
                     session.undoLastEffectivePoint()
                 }
             }
+        }
+        .alert("Discard Match?", isPresented: $showingDiscardConfirmation) {
+            Button("Discard", role: .destructive) {
+                session.returnToSetup()
+            }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("The current match will be lost. This cannot be undone.")
         }
     }
 
