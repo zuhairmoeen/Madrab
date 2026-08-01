@@ -52,7 +52,13 @@ struct MatchSetupView: View {
     }
 
     private func startMatch() {
-        guard let configuration = try? MatchConfiguration() else { return }
+        guard let configuration = try? MatchConfiguration(
+            setsToWin: setsToWin,
+            deuceRule: deuceRule,
+            finalSetMode: finalSetIsMatchTiebreak
+                ? .matchTiebreak(points: 10)
+                : .fullSet
+        ) else { return }
         onStart(configuration, teamALabel, teamBLabel)
     }
 }
