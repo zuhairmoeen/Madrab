@@ -18,6 +18,11 @@ struct ContentView: View {
             NavigationStack {
                 LiveMatchView(session: session)
             }
+
+        case .finished(let winner):
+            MatchFinishedView(session: session, winner: winner) {
+                session.returnToSetup()
+            }
         }
     }
 }

@@ -7,6 +7,7 @@ final class MatchSessionViewModel {
     enum Phase {
         case setup
         case live(MatchState)
+        case finished(Team)
     }
 
     private(set) var phase: Phase = .setup
@@ -19,6 +20,7 @@ final class MatchSessionViewModel {
         switch phase {
         case .setup: return nil
         case .live(let state): return state
+        case .finished: return nil
         }
     }
 
@@ -64,6 +66,13 @@ final class MatchSessionViewModel {
         _ = engine.submit(.undo(UndoEvent(targetEventID: targetID)))
         self.engine = engine
         phase = .live(engine.state)
+    }
+
+    func finishMatch() {
+        guard var engine = engine, let winner = engine.state.matchWinner else { return }
+        _ = engine.submit(.finishMatch(FinishMatchEvent()))
+        self.engine = engine
+        phase = .finished(winner)
     }
 
     func returnToSetup() {
