@@ -10,6 +10,7 @@
 		AB10000000000000000A0004 /* MadrabScoringEngine in Frameworks */ = {isa = PBXBuildFile; productRef = AB10000000000000000A0002 /* MadrabScoringEngine */; };
 		AB10000000000000000A0005 /* MadrabScoringEngine in Frameworks */ = {isa = PBXBuildFile; productRef = AB10000000000000000A0003 /* MadrabScoringEngine */; };
 		FA222F79301B564A00A6B1F5 /* Madrab Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FA222F78301B564A00A6B1F5 /* Madrab Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FA22311B30228AAD00A6B1F5 /* MadrabSyncKit in Frameworks */ = {isa = PBXBuildFile; productRef = FA22311A30228AAD00A6B1F5 /* MadrabSyncKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB10000000000000000A0004 /* MadrabScoringEngine in Frameworks */,
+				FA22311B30228AAD00A6B1F5 /* MadrabSyncKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +205,7 @@
 			name = Madrab;
 			packageProductDependencies = (
 				AB10000000000000000A0002 /* MadrabScoringEngine */,
+				FA22311A30228AAD00A6B1F5 /* MadrabSyncKit */,
 			);
 			productName = Madrab;
 			productReference = FA222F55301B564800A6B1F5 /* Madrab.app */;
@@ -368,6 +371,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				AB10000000000000000A0001 /* XCLocalSwiftPackageReference "MadrabScoringEngine" */,
+				FA22311930228AAD00A6B1F5 /* XCLocalSwiftPackageReference "MadrabSyncKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = FA222F56301B564800A6B1F5 /* Products */;
@@ -1000,6 +1004,10 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = MadrabScoringEngine;
 		};
+		FA22311930228AAD00A6B1F5 /* XCLocalSwiftPackageReference "MadrabSyncKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = MadrabSyncKit;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1012,6 +1020,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AB10000000000000000A0001 /* XCLocalSwiftPackageReference "MadrabScoringEngine" */;
 			productName = MadrabScoringEngine;
+		};
+		FA22311A30228AAD00A6B1F5 /* MadrabSyncKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MadrabSyncKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
