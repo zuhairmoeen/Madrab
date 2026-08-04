@@ -1,0 +1,1217 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.xctest/Contents/MacOS/MadrabSyncKitPackageTests",
+      "packagePath" : "/Users/macbook/Developer/Madrab/MadrabSyncKit",
+      "productName" : "MadrabSyncKitPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.MadrabScoringEngine-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/sources",
+      "importPath" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Configuration/DeuceRule.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Configuration/FinalSetMode.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Configuration/MatchConfiguration.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Domain/ServingPlayer.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Domain/Team.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Domain/TeamPair.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Domain/TeamPlayer.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Engine/MatchEngine.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Engine/MatchReplayer.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Engine/ScoreBuilder.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Errors/MatchError.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Events/EventID.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Events/ScoringEvent.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/ActivePhase.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/GamePointLabel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/GameScore.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/MatchState.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/SetScore.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/TieBreakScore.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "MadrabScoringEngine",
+      "moduleOutputPath" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/Modules/MadrabScoringEngine.swiftmodule",
+      "objects" : [
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/DeuceRule.swift.o",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/FinalSetMode.swift.o",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchConfiguration.swift.o",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ServingPlayer.swift.o",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/Team.swift.o",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/TeamPair.swift.o",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/TeamPlayer.swift.o",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchEngine.swift.o",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchReplayer.swift.o",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ScoreBuilder.swift.o",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchError.swift.o",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/EventID.swift.o",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ScoringEvent.swift.o",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ActivePhase.swift.o",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/GamePointLabel.swift.o",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/GameScore.swift.o",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchState.swift.o",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/SetScore.swift.o",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/TieBreakScore.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/include/MadrabScoringEngine-Swift.h",
+        "-swift-version",
+        "6",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "madrabscoringengine"
+      ],
+      "outputFileMapPath" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/DeuceRule.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/FinalSetMode.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchConfiguration.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ServingPlayer.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/Team.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/TeamPair.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/TeamPlayer.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchEngine.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchReplayer.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ScoreBuilder.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchError.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/EventID.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ScoringEvent.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ActivePhase.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/GamePointLabel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/GameScore.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchState.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/SetScore.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/TieBreakScore.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/Modules/MadrabScoringEngine.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Configuration/DeuceRule.swift",
+        "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Configuration/FinalSetMode.swift",
+        "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Configuration/MatchConfiguration.swift",
+        "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Domain/ServingPlayer.swift",
+        "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Domain/Team.swift",
+        "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Domain/TeamPair.swift",
+        "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Domain/TeamPlayer.swift",
+        "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Engine/MatchEngine.swift",
+        "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Engine/MatchReplayer.swift",
+        "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Engine/ScoreBuilder.swift",
+        "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Errors/MatchError.swift",
+        "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Events/EventID.swift",
+        "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Events/ScoringEvent.swift",
+        "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/ActivePhase.swift",
+        "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/GamePointLabel.swift",
+        "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/GameScore.swift",
+        "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/MatchState.swift",
+        "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/SetScore.swift",
+        "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/TieBreakScore.swift"
+      ],
+      "tempsPath" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.MadrabSyncKit-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/sources",
+      "importPath" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncCommand.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncCommandResponse.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncSnapshot.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/Modules/MadrabScoringEngine.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "MadrabSyncKit",
+      "moduleOutputPath" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/Modules/MadrabSyncKit.swiftmodule",
+      "objects" : [
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncCommand.swift.o",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncCommandResponse.swift.o",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncSnapshot.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/include/MadrabSyncKit-Swift.h",
+        "-swift-version",
+        "6",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "madrabsynckit"
+      ],
+      "outputFileMapPath" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncCommand.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncCommandResponse.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncSnapshot.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/Modules/MadrabSyncKit.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncCommand.swift",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncCommandResponse.swift",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncSnapshot.swift"
+      ],
+      "tempsPath" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.MadrabSyncKitPackageTests-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.build/sources",
+      "importPath" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/Modules/MadrabSyncKitTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "MadrabSyncKitPackageTests",
+      "moduleOutputPath" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/Modules/MadrabSyncKitPackageTests.swiftmodule",
+      "objects" : [
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.build/include/MadrabSyncKitPackageTests-Swift.h",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "madrabsynckit"
+      ],
+      "outputFileMapPath" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/Modules/MadrabSyncKitPackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.MadrabSyncKitTests-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitTests.build/sources",
+      "importPath" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/Tests/MadrabSyncKitTests/Support/RoundTrip.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/Tests/MadrabSyncKitTests/SyncCommandResponseTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/Tests/MadrabSyncKitTests/SyncCommandTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/Tests/MadrabSyncKitTests/SyncSnapshotTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/Modules/MadrabSyncKit.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "MadrabSyncKitTests",
+      "moduleOutputPath" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/Modules/MadrabSyncKitTests.swiftmodule",
+      "objects" : [
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitTests.build/RoundTrip.swift.o",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitTests.build/SyncCommandResponseTests.swift.o",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitTests.build/SyncCommandTests.swift.o",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitTests.build/SyncSnapshotTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-swift-version",
+        "6",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "madrabsynckit"
+      ],
+      "outputFileMapPath" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitTests.build/RoundTrip.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitTests.build/SyncCommandResponseTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitTests.build/SyncCommandTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitTests.build/SyncSnapshotTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/Modules/MadrabSyncKitTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/Tests/MadrabSyncKitTests/Support/RoundTrip.swift",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/Tests/MadrabSyncKitTests/SyncCommandResponseTests.swift",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/Tests/MadrabSyncKitTests/SyncCommandTests.swift",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/Tests/MadrabSyncKitTests/SyncSnapshotTests.swift"
+      ],
+      "tempsPath" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "MadrabScoringEngine" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "MadrabScoringEngine",
+      "-package-name",
+      "madrabscoringengine",
+      "-c",
+      "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Configuration/DeuceRule.swift",
+      "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Configuration/FinalSetMode.swift",
+      "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Configuration/MatchConfiguration.swift",
+      "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Domain/ServingPlayer.swift",
+      "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Domain/Team.swift",
+      "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Domain/TeamPair.swift",
+      "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Domain/TeamPlayer.swift",
+      "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Engine/MatchEngine.swift",
+      "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Engine/MatchReplayer.swift",
+      "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Engine/ScoreBuilder.swift",
+      "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Errors/MatchError.swift",
+      "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Events/EventID.swift",
+      "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Events/ScoringEvent.swift",
+      "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/ActivePhase.swift",
+      "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/GamePointLabel.swift",
+      "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/GameScore.swift",
+      "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/MatchState.swift",
+      "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/SetScore.swift",
+      "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/TieBreakScore.swift",
+      "-I",
+      "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/include/MadrabScoringEngine-Swift.h",
+      "-swift-version",
+      "6",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "madrabscoringengine",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "MadrabSyncKit" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "MadrabSyncKit",
+      "-package-name",
+      "madrabsynckit",
+      "-c",
+      "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncCommand.swift",
+      "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncCommandResponse.swift",
+      "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncSnapshot.swift",
+      "-I",
+      "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/include/MadrabSyncKit-Swift.h",
+      "-swift-version",
+      "6",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "madrabsynckit",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "MadrabSyncKitPackageTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "MadrabSyncKitPackageTests",
+      "-package-name",
+      "madrabsynckit",
+      "-c",
+      "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.derived/runner.swift",
+      "-I",
+      "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.build/include/MadrabSyncKitPackageTests-Swift.h",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "madrabsynckit",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "MadrabSyncKitTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "MadrabSyncKitTests",
+      "-package-name",
+      "madrabsynckit",
+      "-c",
+      "/Users/macbook/Developer/Madrab/MadrabSyncKit/Tests/MadrabSyncKitTests/Support/RoundTrip.swift",
+      "/Users/macbook/Developer/Madrab/MadrabSyncKit/Tests/MadrabSyncKitTests/SyncCommandResponseTests.swift",
+      "/Users/macbook/Developer/Madrab/MadrabSyncKit/Tests/MadrabSyncKitTests/SyncCommandTests.swift",
+      "/Users/macbook/Developer/Madrab/MadrabSyncKit/Tests/MadrabSyncKitTests/SyncSnapshotTests.swift",
+      "-I",
+      "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-swift-version",
+      "6",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "madrabsynckit",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "MadrabScoringEngine" : [
+
+    ],
+    "MadrabSyncKit" : [
+      "MadrabScoringEngine"
+    ],
+    "MadrabSyncKitPackageTests" : [
+      "MadrabSyncKitTests",
+      "MadrabSyncKit",
+      "MadrabScoringEngine"
+    ],
+    "MadrabSyncKitTests" : [
+      "MadrabSyncKit",
+      "MadrabScoringEngine"
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+    "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.derived/runner.swift" : {
+      "inputs" : [
+
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.derived/runner.swift"
+        }
+      ]
+    }
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Configuration/DeuceRule.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Configuration/FinalSetMode.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Configuration/MatchConfiguration.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Domain/ServingPlayer.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Domain/Team.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Domain/TeamPair.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Domain/TeamPlayer.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Engine/MatchEngine.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Engine/MatchReplayer.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Engine/ScoreBuilder.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Errors/MatchError.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Events/EventID.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Events/ScoringEvent.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/ActivePhase.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/GamePointLabel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/GameScore.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/MatchState.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/SetScore.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/TieBreakScore.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/sources"
+    },
+    "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncCommand.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncCommandResponse.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncSnapshot.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/sources"
+    },
+    "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.build/sources"
+    },
+    "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ActivePhase.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/DeuceRule.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/EventID.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/FinalSetMode.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/GamePointLabel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/GameScore.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchConfiguration.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchEngine.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchError.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchReplayer.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchState.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ScoreBuilder.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ScoringEvent.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ServingPlayer.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/SetScore.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/Team.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/TeamPair.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/TeamPlayer.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/TieBreakScore.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncCommand.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncCommandResponse.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncSnapshot.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitTests.build/RoundTrip.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitTests.build/SyncCommandResponseTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitTests.build/SyncCommandTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitTests.build/SyncSnapshotTests.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.product/Objects.LinkFileList"
+    },
+    "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/Tests/MadrabSyncKitTests/Support/RoundTrip.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/Tests/MadrabSyncKitTests/SyncCommandResponseTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/Tests/MadrabSyncKitTests/SyncCommandTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/Tests/MadrabSyncKitTests/SyncSnapshotTests.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitTests.build/sources"
+    },
+    "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

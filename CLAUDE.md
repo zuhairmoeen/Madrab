@@ -16,6 +16,21 @@ Milestone 3's automated verification (188 tests across `MadrabTests` and `Madrab
 
 The next planned milestone after Milestone 3 is incorporating user feedback and suggestions. That milestone is not yet scoped and must not be implemented until explicitly requested.
 
+## Three-day sprint: Apple Watch synchronization MVP
+
+A time-boxed sprint, layered on top of the checkpointed Milestone 3
+implementation (automated tests and build passing; owner manual QA sign-off
+still pending separately), promotes Apple Watch companion sync to the top
+priority ahead of leaderboard redesign, analytics, badges, weekly tasks, and
+broad visual polish. For the duration of this sprint, and only for this
+sprint's listed deliverables, the Milestone 3 exclusions on **Watch
+Connectivity** and **Apple Watch UI** are superseded. The
+**authority-transfer** exclusion is NOT superseded: the iPhone remains the
+sole scoring authority at all times, the Watch never independently commits
+state, and no negotiated-authority-handoff logic is implemented. All other
+Milestone 3 exclusions remain in force. See SPEC.md's "Watch Synchronization
+Sprint" section for the full command/snapshot schema and validation rules.
+
 Always read `SPEC.md` before planning or modifying code.
 
 ## Required working process
@@ -156,6 +171,17 @@ Do not implement or modify product code for:
 * Other sports
 
 A minimal, non-browsable record needed to guarantee idempotent point-awarding is in scope; a browsable match-history library is not.
+
+For the duration of the Watch Synchronization Sprint (see above), "Apple
+Watch scoring screens," "Haptics," "Watch Connectivity," and "Synchronization"
+are in scope, per SPEC.md's "Watch Synchronization Sprint" section. The
+"Animations" exception is limited specifically to the Watch companion's UI
+and the live-scoring visual transition (the "premium scoring experience"
+described in SPEC.md) — it is not a general license for animation work
+elsewhere in the app. "Device authority," "Authority transfer," and
+"Conflict recovery" remain off-limits even during this sprint: the iPhone
+stays the sole authority, no negotiated authority handoff is implemented,
+and no second offline scoring authority is implemented on the Watch.
 
 Do not refactor unrelated Xcode-generated files.
 

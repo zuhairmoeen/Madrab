@@ -1,0 +1,27 @@
+{
+  "object" : {
+    "artifacts" : [
+
+    ],
+    "dependencies" : [
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "madrabscoringengine",
+          "kind" : "fileSystem",
+          "location" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine",
+          "name" : "MadrabScoringEngine"
+        },
+        "state" : {
+          "name" : "fileSystem",
+          "path" : "/Users/macbook/Developer/Madrab/MadrabScoringEngine"
+        },
+        "subpath" : "madrabscoringengine"
+      }
+    ],
+    "prebuilts" : [
+
+    ]
+  },
+  "version" : 7
+}

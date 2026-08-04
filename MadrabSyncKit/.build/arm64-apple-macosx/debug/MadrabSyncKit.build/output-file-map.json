@@ -1,0 +1,26 @@
+{
+  "": {
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/primary.swiftdeps"
+  },
+  "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncCommand.swift": {
+    "dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncCommand.d",
+    "object": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncCommand.swift.o",
+    "swiftmodule": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncCommand.swiftdeps",
+    "diagnostics": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncCommand.dia"
+  },
+  "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncCommandResponse.swift": {
+    "dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncCommandResponse.d",
+    "object": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncCommandResponse.swift.o",
+    "swiftmodule": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncCommandResponse~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncCommandResponse.swiftdeps",
+    "diagnostics": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncCommandResponse.dia"
+  },
+  "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncSnapshot.swift": {
+    "dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncSnapshot.d",
+    "object": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncSnapshot.swift.o",
+    "swiftmodule": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncSnapshot~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncSnapshot.swiftdeps",
+    "diagnostics": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncSnapshot.dia"
+  }
+}

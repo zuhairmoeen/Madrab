@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.build/primary.swiftdeps"
+  },
+  "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.derived/runner.swift": {
+    "dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.build/runner.d",
+    "object": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.build/runner.swift.o",
+    "swiftmodule": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.build/runner~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.build/runner.swiftdeps",
+    "diagnostics": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKitPackageTests.build/runner.dia"
+  }
+}

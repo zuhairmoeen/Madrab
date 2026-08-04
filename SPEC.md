@@ -412,6 +412,60 @@ Do not implement:
 * Database storage
 * Browsable match-history library
 
+For the duration of the Watch Synchronization Sprint (see below), "Apple
+Watch UI," "Watch Connectivity," and "Device synchronization" are in scope.
+"Animations" is in scope only for the Watch companion's UI and the
+live-scoring visual transition described in that section — not a general
+license elsewhere. "Authority transfer," "Conflict recovery," and any second
+offline scoring authority remain out of scope even during this sprint.
+
+## Watch Synchronization Sprint (post-Milestone-3, time-boxed)
+
+Adds a real Apple Watch companion app, phone-authoritative live sync via
+WatchConnectivity, local four-player (two-pair) matches, a 50-point win
+formula, and basic local recent-match history — on top of the unmodified
+Milestone 3 profile/leaderboard system and the unmodified
+`MadrabScoringEngine` Team A/Team B model.
+
+### Authority model
+The iPhone is the sole scoring authority; this is not superseded by this
+sprint. The Watch sends commands; the iPhone validates, applies, persists,
+and returns an explicit accepted/alreadyApplied/rejected outcome plus the
+authoritative snapshot. An unreachable iPhone makes the Watch read-only — no
+second offline scoring authority, and no authority transfer, is implemented.
+
+### Sync command validation
+The iPhone rejects, with an explicit reason: malformed/unsupported commands,
+wrong-match commands, commands with no live match, stale state revisions,
+commands after match finish, and invalid undo requests. A duplicate command
+ID — including one whose match has since finished or been discarded — is
+answered as "already applied," not an error; this protection is persisted
+per active match and, once a match ends, via a small durable command-receipt
+record, so a lost-reply retry is recognized correctly and never double-scores.
+
+### Four-player matches
+A new match requires four distinct local profiles, arranged as two pairs
+(Team A: two profiles, Team B: two profiles). The scoring engine's Team A/
+Team B model is unmodified; pairing is an app-layer concept only. A match
+persisted before this sprint (exactly one profile per team) is never
+discarded on migration — it restores and finishes normally, but does not
+participate in the points system either way.
+
+### Points
+Each player on the winning pair receives 50 points on match completion.
+Discarded or in-progress matches award nothing. Awarding is idempotent per
+match, including across relaunch.
+
+### Recent match history
+The last 10 completed matches are stored locally for display only — not a
+browsable/searchable history library.
+
+### Out of scope for this sprint
+Real accounts, cloud sync, real cross-device username search, online
+friend/leaderboard features, weekly tasks, badges, advanced analytics,
+production multi-authority conflict resolution, App Store security work,
+and any form of authority transfer between iPhone and Watch.
+
 ## Milestone 4 (planned, not yet scoped)
 
 The next planned milestone after Milestone 3 is incorporating user feedback and suggestions. No objective, requirements, or architecture for Milestone 4 exist yet, and none should be implemented until it is explicitly scoped and requested.

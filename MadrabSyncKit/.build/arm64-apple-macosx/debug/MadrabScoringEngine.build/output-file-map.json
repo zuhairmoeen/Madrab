@@ -1,0 +1,138 @@
+{
+  "": {
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/primary.swiftdeps"
+  },
+  "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Configuration/DeuceRule.swift": {
+    "dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/DeuceRule.d",
+    "object": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/DeuceRule.swift.o",
+    "swiftmodule": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/DeuceRule~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/DeuceRule.swiftdeps",
+    "diagnostics": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/DeuceRule.dia"
+  },
+  "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Configuration/FinalSetMode.swift": {
+    "dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/FinalSetMode.d",
+    "object": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/FinalSetMode.swift.o",
+    "swiftmodule": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/FinalSetMode~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/FinalSetMode.swiftdeps",
+    "diagnostics": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/FinalSetMode.dia"
+  },
+  "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Configuration/MatchConfiguration.swift": {
+    "dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchConfiguration.d",
+    "object": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchConfiguration.swift.o",
+    "swiftmodule": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchConfiguration~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchConfiguration.swiftdeps",
+    "diagnostics": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchConfiguration.dia"
+  },
+  "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Domain/ServingPlayer.swift": {
+    "dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ServingPlayer.d",
+    "object": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ServingPlayer.swift.o",
+    "swiftmodule": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ServingPlayer~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ServingPlayer.swiftdeps",
+    "diagnostics": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ServingPlayer.dia"
+  },
+  "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Domain/Team.swift": {
+    "dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/Team.d",
+    "object": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/Team.swift.o",
+    "swiftmodule": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/Team~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/Team.swiftdeps",
+    "diagnostics": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/Team.dia"
+  },
+  "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Domain/TeamPair.swift": {
+    "dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/TeamPair.d",
+    "object": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/TeamPair.swift.o",
+    "swiftmodule": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/TeamPair~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/TeamPair.swiftdeps",
+    "diagnostics": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/TeamPair.dia"
+  },
+  "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Domain/TeamPlayer.swift": {
+    "dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/TeamPlayer.d",
+    "object": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/TeamPlayer.swift.o",
+    "swiftmodule": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/TeamPlayer~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/TeamPlayer.swiftdeps",
+    "diagnostics": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/TeamPlayer.dia"
+  },
+  "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Engine/MatchEngine.swift": {
+    "dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchEngine.d",
+    "object": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchEngine.swift.o",
+    "swiftmodule": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchEngine~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchEngine.swiftdeps",
+    "diagnostics": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchEngine.dia"
+  },
+  "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Engine/MatchReplayer.swift": {
+    "dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchReplayer.d",
+    "object": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchReplayer.swift.o",
+    "swiftmodule": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchReplayer~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchReplayer.swiftdeps",
+    "diagnostics": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchReplayer.dia"
+  },
+  "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Engine/ScoreBuilder.swift": {
+    "dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ScoreBuilder.d",
+    "object": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ScoreBuilder.swift.o",
+    "swiftmodule": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ScoreBuilder~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ScoreBuilder.swiftdeps",
+    "diagnostics": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ScoreBuilder.dia"
+  },
+  "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Errors/MatchError.swift": {
+    "dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchError.d",
+    "object": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchError.swift.o",
+    "swiftmodule": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchError~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchError.swiftdeps",
+    "diagnostics": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchError.dia"
+  },
+  "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Events/EventID.swift": {
+    "dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/EventID.d",
+    "object": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/EventID.swift.o",
+    "swiftmodule": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/EventID~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/EventID.swiftdeps",
+    "diagnostics": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/EventID.dia"
+  },
+  "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/Events/ScoringEvent.swift": {
+    "dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ScoringEvent.d",
+    "object": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ScoringEvent.swift.o",
+    "swiftmodule": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ScoringEvent~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ScoringEvent.swiftdeps",
+    "diagnostics": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ScoringEvent.dia"
+  },
+  "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/ActivePhase.swift": {
+    "dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ActivePhase.d",
+    "object": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ActivePhase.swift.o",
+    "swiftmodule": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ActivePhase~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ActivePhase.swiftdeps",
+    "diagnostics": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/ActivePhase.dia"
+  },
+  "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/GamePointLabel.swift": {
+    "dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/GamePointLabel.d",
+    "object": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/GamePointLabel.swift.o",
+    "swiftmodule": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/GamePointLabel~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/GamePointLabel.swiftdeps",
+    "diagnostics": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/GamePointLabel.dia"
+  },
+  "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/GameScore.swift": {
+    "dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/GameScore.d",
+    "object": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/GameScore.swift.o",
+    "swiftmodule": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/GameScore~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/GameScore.swiftdeps",
+    "diagnostics": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/GameScore.dia"
+  },
+  "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/MatchState.swift": {
+    "dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchState.d",
+    "object": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchState.swift.o",
+    "swiftmodule": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchState~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchState.swiftdeps",
+    "diagnostics": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/MatchState.dia"
+  },
+  "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/SetScore.swift": {
+    "dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/SetScore.d",
+    "object": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/SetScore.swift.o",
+    "swiftmodule": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/SetScore~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/SetScore.swiftdeps",
+    "diagnostics": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/SetScore.dia"
+  },
+  "/Users/macbook/Developer/Madrab/MadrabScoringEngine/Sources/MadrabScoringEngine/State/TieBreakScore.swift": {
+    "dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/TieBreakScore.d",
+    "object": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/TieBreakScore.swift.o",
+    "swiftmodule": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/TieBreakScore~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/TieBreakScore.swiftdeps",
+    "diagnostics": "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabScoringEngine.build/TieBreakScore.dia"
+  }
+}
