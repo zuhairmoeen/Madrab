@@ -11,6 +11,7 @@
 		AB10000000000000000A0005 /* MadrabScoringEngine in Frameworks */ = {isa = PBXBuildFile; productRef = AB10000000000000000A0003 /* MadrabScoringEngine */; };
 		FA222F79301B564A00A6B1F5 /* Madrab Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FA222F78301B564A00A6B1F5 /* Madrab Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FA22311B30228AAD00A6B1F5 /* MadrabSyncKit in Frameworks */ = {isa = PBXBuildFile; productRef = FA22311A30228AAD00A6B1F5 /* MadrabSyncKit */; };
+		FA22320C3023291400A6B1F5 /* MadrabSyncKit in Frameworks */ = {isa = PBXBuildFile; productRef = FA22320B3023291400A6B1F5 /* MadrabSyncKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB10000000000000000A0005 /* MadrabScoringEngine in Frameworks */,
+				FA22320C3023291400A6B1F5 /* MadrabSyncKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +167,7 @@
 				FA222F7C301B564A00A6B1F5 /* Madrab Watch App */,
 				FA222F8A301B564B00A6B1F5 /* Madrab Watch AppTests */,
 				FA222F94301B564B00A6B1F5 /* Madrab Watch AppUITests */,
+				FA22320A302328EC00A6B1F5 /* Frameworks */,
 				FA222F56301B564800A6B1F5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -180,6 +183,13 @@
 				FA222F91301B564B00A6B1F5 /* Madrab Watch AppUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FA22320A302328EC00A6B1F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +285,7 @@
 			name = "Madrab Watch App";
 			packageProductDependencies = (
 				AB10000000000000000A0003 /* MadrabScoringEngine */,
+				FA22320B3023291400A6B1F5 /* MadrabSyncKit */,
 			);
 			productName = "Madrab Watch App";
 			productReference = FA222F78301B564A00A6B1F5 /* Madrab Watch App.app */;
@@ -1023,6 +1034,11 @@
 		};
 		FA22311A30228AAD00A6B1F5 /* MadrabSyncKit */ = {
 			isa = XCSwiftPackageProductDependency;
+			productName = MadrabSyncKit;
+		};
+		FA22320B3023291400A6B1F5 /* MadrabSyncKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA22311930228AAD00A6B1F5 /* XCLocalSwiftPackageReference "MadrabSyncKit" */;
 			productName = MadrabSyncKit;
 		};
 /* End XCSwiftPackageProductDependency section */

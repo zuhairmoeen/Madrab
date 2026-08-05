@@ -307,6 +307,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncPayload.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncSnapshot.swift"
         },
         {
@@ -328,6 +332,7 @@
       "objects" : [
         "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncCommand.swift.o",
         "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncCommandResponse.swift.o",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncPayload.swift.o",
         "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncSnapshot.swift.o"
       ],
       "otherArguments" : [
@@ -391,6 +396,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncPayload.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncSnapshot.swift.o"
         },
         {
@@ -402,6 +411,7 @@
       "sources" : [
         "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncCommand.swift",
         "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncCommandResponse.swift",
+        "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncPayload.swift",
         "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncSnapshot.swift"
       ],
       "tempsPath" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build",
@@ -718,6 +728,7 @@
       "-c",
       "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncCommand.swift",
       "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncCommandResponse.swift",
+      "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncPayload.swift",
       "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncSnapshot.swift",
       "-I",
       "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/Modules",
@@ -1036,6 +1047,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncPayload.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/Sources/MadrabSyncKit/SyncSnapshot.swift"
         }
       ],
@@ -1145,6 +1160,10 @@
         {
           "kind" : "file",
           "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncCommandResponse.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Developer/Madrab/MadrabSyncKit/.build/arm64-apple-macosx/debug/MadrabSyncKit.build/SyncPayload.swift.o"
         },
         {
           "kind" : "file",

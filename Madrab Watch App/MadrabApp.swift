@@ -1,17 +1,13 @@
-//
-//  MadrabApp.swift
-//  Madrab Watch App
-//
-//  Created by Zuhayr on 30.07.2026.
-//
-
 import SwiftUI
 
 @main
 struct Madrab_Watch_AppApp: App {
+    @State private var client = WatchSyncClient(session: LiveWatchConnectivitySession())
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(client: client)
+                .task { client.activate() }
         }
     }
 }
