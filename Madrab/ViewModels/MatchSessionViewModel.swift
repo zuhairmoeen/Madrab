@@ -4,7 +4,17 @@ import MadrabScoringEngine
 import MadrabSyncKit
 
 enum MatchSessionError: Error, Equatable {
+    /// The leaderboard/result recorder refused the completed match. The
+    /// terminal active match and its command ledger are both retained so a
+    /// later `finishMatch()` or relaunch can retry.
     case pointsRecordingFailed
+    /// The terminal `FinishMatch` event could not be applied or durably
+    /// saved. Retryable: nothing was recorded, promoted, or cleared.
+    case finishPersistenceFailed
+    /// Command receipts could not be promoted to durable storage, so the
+    /// active match that still holds them was deliberately left intact
+    /// rather than risk losing duplicate protection. Retryable.
+    case activeMatchCleanupFailed
 }
 
 /// Why a scoring event could not be applied. Keeps the engine's own verdict
@@ -183,22 +193,56 @@ final class MatchSessionViewModel {
     /// no-op (already terminal), and `MatchResultRecorder` is independently
     /// idempotent per `matchID`.
     func finishMatch() {
-        guard var engine = engine, let winner = engine.state.matchWinner else { return }
+        guard let currentEngine = engine, let winner = currentEngine.state.matchWinner else { return }
 
-        if !engine.state.isTerminal {
-            _ = engine.submit(.finishMatch(FinishMatchEvent()))
-            self.engine = engine
-            persist()
+        if !currentEngine.state.isTerminal {
+            let previousEngine = engine
+            let previousPhase = phase
+            let previousProcessedCommandIDs = processedCommandIDs
+
+            // The terminal event must be applied through the validated helper
+            // and durably saved before any side effect runs. Until that write
+            // succeeds nothing is recorded, promoted, or cleared. `sessionError`
+            // is deliberately set rather than restored: a failed finish has to
+            // surface so the caller can retry.
+            guard case .success = applyScoringEvent(.finishMatch(FinishMatchEvent())) else {
+                sessionError = .finishPersistenceFailed
+                return
+            }
+
+            do {
+                try persistOrThrow()
+            } catch {
+                engine = previousEngine
+                phase = previousPhase
+                processedCommandIDs = previousProcessedCommandIDs
+                sessionError = .finishPersistenceFailed
+                return
+            }
         }
 
         completeAfterRecording(winner: winner)
     }
 
+    /// Discards the active match. Fallible by design: any command receipts
+    /// this match holds must reach durable storage before the match that
+    /// holds them is destroyed, or a Watch retry after the discard could
+    /// score again. On promotion failure nothing at all is discarded.
     func returnToSetup() {
+        if let matchID, !processedCommandIDs.isEmpty {
+            do {
+                try commandReceiptStore.promote(matchID: matchID, commandIDs: processedCommandIDs)
+            } catch {
+                sessionError = .activeMatchCleanupFailed
+                return
+            }
+        }
+
         engine = nil
         matchID = nil
         teamAProfileID = nil
         teamBProfileID = nil
+        processedCommandIDs = []
         teamALabel = "Team A"
         teamBLabel = "Team B"
         sessionError = nil
@@ -249,27 +293,44 @@ final class MatchSessionViewModel {
     /// `finishMatch()`, or another `restoreIfNeeded()` on relaunch) has
     /// something to act on.
     private func completeAfterRecording(winner: Team) {
-        guard let matchID, let teamAProfileID, let teamBProfileID else {
-            store.clear()
-            phase = .finished(winner)
-            return
+        // a. Leaderboard, idempotent per `matchID`. A legacy match with no
+        //    profile linkage has nothing to record and skips straight past.
+        if let matchID, let teamAProfileID, let teamBProfileID {
+            let winnerProfileID = winner == .teamA ? teamAProfileID : teamBProfileID
+            let loserProfileID = winner == .teamA ? teamBProfileID : teamAProfileID
+            do {
+                try resultRecorder.recordCompletedMatch(
+                    matchID: matchID,
+                    winnerProfileID: winnerProfileID,
+                    loserProfileID: loserProfileID
+                )
+            } catch {
+                // Terminal file and command ledger are both left intact, so
+                // another `finishMatch()` or a relaunch can retry.
+                sessionError = .pointsRecordingFailed
+                return
+            }
         }
 
-        let winnerProfileID = winner == .teamA ? teamAProfileID : teamBProfileID
-        let loserProfileID = winner == .teamA ? teamBProfileID : teamAProfileID
+        // b. Recent-match history is inserted here by a later task, between
+        //    leaderboard recording and receipt promotion.
 
-        do {
-            try resultRecorder.recordCompletedMatch(
-                matchID: matchID,
-                winnerProfileID: winnerProfileID,
-                loserProfileID: loserProfileID
-            )
-            store.clear()
-            phase = .finished(winner)
-            sessionError = nil
-        } catch {
-            sessionError = .pointsRecordingFailed
+        // c. Promote receipts *before* anything is cleared, so an accepted
+        //    command is never absent from both ledgers at the same instant.
+        if let matchID, !processedCommandIDs.isEmpty {
+            do {
+                try commandReceiptStore.promote(matchID: matchID, commandIDs: processedCommandIDs)
+            } catch {
+                sessionError = .activeMatchCleanupFailed
+                return
+            }
         }
+
+        // d–g. Only now is it safe to clear and finish.
+        store.clear()
+        processedCommandIDs = []
+        phase = .finished(winner)
+        sessionError = nil
     }
 
     /// Best-effort save used by phone-originated actions, which have no
