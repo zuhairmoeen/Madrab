@@ -3,6 +3,7 @@ import Foundation
 @testable import Madrab
 import MadrabScoringEngine
 
+@MainActor
 struct MatchSessionViewModelTests {
     private func makeTemporaryStore() -> MatchStore {
         MatchStore(

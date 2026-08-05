@@ -1,6 +1,6 @@
 import Foundation
 
-struct LeaderboardFile: Codable, Equatable {
+nonisolated struct LeaderboardFile: Codable, Equatable {
     static let currentSchemaVersion = 1
 
     var schemaVersion: Int = 1

@@ -1,6 +1,6 @@
 import Foundation
 
-struct PlayerProfile: Codable, Identifiable, Equatable, Hashable {
+nonisolated struct PlayerProfile: Codable, Identifiable, Equatable, Hashable {
     let id: UUID
     var displayName: String
     var avatarImageData: Data?
