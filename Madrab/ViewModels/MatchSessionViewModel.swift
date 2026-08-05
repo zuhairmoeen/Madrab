@@ -1,11 +1,27 @@
 import Foundation
 import Observation
 import MadrabScoringEngine
+import MadrabSyncKit
 
 enum MatchSessionError: Error, Equatable {
     case pointsRecordingFailed
 }
 
+/// Why a scoring event could not be applied. Keeps the engine's own verdict
+/// distinct from local preconditions and internal invariant breaches, so no
+/// `MatchError` is ever fabricated to stand in for something the engine
+/// never actually reported.
+private enum ScoringApplicationError: Error {
+    /// No active engine — a caller-side precondition, not an engine verdict.
+    case noActiveEngine
+    /// The engine explicitly rejected the event; its exact verdict is kept.
+    case engineRejected(MatchError)
+    /// The engine reported success but the log did not grow by exactly one
+    /// event. An internal invariant breach, not anything the engine claimed.
+    case unexpectedEventCount(expected: Int, actual: Int)
+}
+
+@MainActor
 @Observable
 final class MatchSessionViewModel {
     enum Phase {
@@ -23,13 +39,29 @@ final class MatchSessionViewModel {
     private var matchID: UUID?
     private var teamAProfileID: UUID?
     private var teamBProfileID: UUID?
+    /// Command IDs already applied to the *current* active match by a remote
+    /// (Watch) command. Reset whenever the active match changes, restored
+    /// from persistence on relaunch, and promoted to the durable
+    /// `CommandReceipting` store before the active match is ever cleared.
+    private var processedCommandIDs: Set<UUID> = []
 
     private let store: MatchStore
     private let resultRecorder: MatchResultRecording
+    private let commandReceiptStore: CommandReceipting
 
-    init(store: MatchStore = MatchStore(), resultRecorder: MatchResultRecording? = nil) {
-        self.store = store
+    /// Dependencies default to `nil` rather than to concrete instances
+    /// because a default-argument expression is evaluated in a nonisolated
+    /// context, where constructing these main-actor-isolated stores would
+    /// warn. Resolving them inside this `@MainActor` body is equivalent for
+    /// every caller and keeps the stores' own isolation unchanged.
+    init(
+        store: MatchStore? = nil,
+        resultRecorder: MatchResultRecording? = nil,
+        commandReceiptStore: CommandReceipting? = nil
+    ) {
+        self.store = store ?? MatchStore()
         self.resultRecorder = resultRecorder ?? MatchResultRecorder()
+        self.commandReceiptStore = commandReceiptStore ?? CommandReceiptStore()
     }
 
     var state: MatchState? {
@@ -68,6 +100,7 @@ final class MatchSessionViewModel {
         self.matchID = nil
         self.teamAProfileID = nil
         self.teamBProfileID = nil
+        self.processedCommandIDs = []
         self.sessionError = nil
 
         let newEngine = MatchEngine(configuration: configuration)
@@ -92,6 +125,7 @@ final class MatchSessionViewModel {
         matchID = UUID()
         teamAProfileID = teamAProfile.id
         teamBProfileID = teamBProfile.id
+        processedCommandIDs = []
         sessionError = nil
 
         let newEngine = MatchEngine(configuration: configuration)
@@ -102,21 +136,43 @@ final class MatchSessionViewModel {
     }
 
     func recordPoint(for team: Team) {
-        guard var engine = engine else { return }
-        _ = engine.submit(.pointWon(PointWonEvent(winningTeam: team)))
-        self.engine = engine
-        phase = .live(engine.state)
+        guard case .success = applyScoringEvent(.pointWon(PointWonEvent(winningTeam: team))) else { return }
         persist()
     }
 
     func undoLastEffectivePoint() {
-        guard var engine = engine,
+        guard let engine,
               let targetID = Self.lastEffectivePointID(in: engine.events)
         else { return }
-        _ = engine.submit(.undo(UndoEvent(targetEventID: targetID)))
-        self.engine = engine
-        phase = .live(engine.state)
+        guard case .success = applyScoringEvent(.undo(UndoEvent(targetEventID: targetID))) else { return }
         persist()
+    }
+
+    /// Applies one event to the engine and updates `phase`, without touching
+    /// persistence. Assigns `self.engine` only after the engine reports
+    /// success *and* the log is proven to have grown by exactly one event, so
+    /// a rejected or no-op submission can never leave partially-applied state.
+    ///
+    /// Shared by the local (phone-originated) and remote (Watch-originated)
+    /// paths so both mutate through identical logic; the two differ only in
+    /// how they persist afterwards, which is the caller's responsibility.
+    @discardableResult
+    private func applyScoringEvent(_ event: ScoringEvent) -> Result<Void, ScoringApplicationError> {
+        guard var engine else { return .failure(.noActiveEngine) }
+        let previousCount = engine.events.count
+
+        switch engine.submit(event) {
+        case .failure(let error):
+            return .failure(.engineRejected(error))
+        case .success:
+            let newCount = engine.events.count
+            guard newCount == previousCount + 1 else {
+                return .failure(.unexpectedEventCount(expected: previousCount + 1, actual: newCount))
+            }
+            self.engine = engine
+            phase = .live(engine.state)
+            return .success(())
+        }
     }
 
     /// Crash-safe completion: the terminal event is persisted before any
@@ -173,6 +229,7 @@ final class MatchSessionViewModel {
         matchID = persisted.matchID
         teamAProfileID = persisted.teamAProfileID
         teamBProfileID = persisted.teamBProfileID
+        processedCommandIDs = persisted.processedCommandIDs
         teamALabel = persisted.teamALabel
         teamBLabel = persisted.teamBLabel
         sessionError = nil
@@ -215,7 +272,19 @@ final class MatchSessionViewModel {
         }
     }
 
+    /// Best-effort save used by phone-originated actions, which have no
+    /// caller waiting on a typed failure. Unchanged in behavior from before
+    /// the sync work: a failure is swallowed and retried by the next save.
     private func persist() {
+        try? persistOrThrow()
+    }
+
+    /// Saves the current event log **and** the remote-command ledger together
+    /// in one atomic `MatchStore` write, propagating any failure. The remote
+    /// path requires this: a scoring event and the `commandID` that produced
+    /// it must never land on disk separately, or a retry after a crash could
+    /// score the same command twice.
+    private func persistOrThrow() throws {
         guard let engine else { return }
         let match = PersistedMatch(
             configuration: engine.configuration,
@@ -224,9 +293,226 @@ final class MatchSessionViewModel {
             teamBLabel: teamBLabel,
             matchID: matchID,
             teamAProfileID: teamAProfileID,
-            teamBProfileID: teamBProfileID
+            teamBProfileID: teamBProfileID,
+            processedCommandIDs: processedCommandIDs
         )
-        try? store.save(match)
+        try store.save(match)
+    }
+
+    // MARK: - Watch synchronization (phone is the sole authority)
+
+    /// The iPhone's authoritative view of the match, for broadcast to the
+    /// Watch or inclusion in a `SyncCommandResponse`.
+    ///
+    /// `lastAcknowledgedCommandID` is the ID of a command the phone has
+    /// actually applied — passed for `.accepted` and `.alreadyApplied`, and
+    /// `nil` for a rejection or an ordinary phone-originated broadcast, so
+    /// the Watch can never read an acknowledgement into a refusal.
+    func currentSnapshot(lastAcknowledgedCommandID: UUID? = nil) -> SyncSnapshot {
+        let state = engine?.state
+        let sessionPhase: SyncSessionPhase
+        switch phase {
+        case .setup: sessionPhase = .setup
+        case .live: sessionPhase = .live
+        case .finished: sessionPhase = .finished
+        }
+
+        return SyncSnapshot(
+            matchID: matchID,
+            stateRevision: engine?.events.count ?? 0,
+            // Interim: one profile per side until four-player pairs land.
+            teamAPair: PairNames(first: teamALabel, second: ""),
+            teamBPair: PairNames(first: teamBLabel, second: ""),
+            sets: (state?.sets ?? []).map(Self.wireSetScore),
+            currentPhase: state?.currentPhase.map(Self.wireActivePhase),
+            servingTeam: state?.servingTeam,
+            servingPlayer: state?.servingPlayer,
+            matchWinner: state?.matchWinner,
+            sessionPhase: sessionPhase,
+            canUndo: canUndo,
+            lastAcknowledgedCommandID: lastAcknowledgedCommandID
+        )
+    }
+
+    private static func wireSetScore(_ set: SetScore) -> SyncSetScore {
+        SyncSetScore(
+            games: set.games,
+            tieBreak: set.tieBreak.map { SyncTieBreakScore(points: $0.points) },
+            winner: set.winner
+        )
+    }
+
+    private static func wireActivePhase(_ phase: ActivePhase) -> SyncActivePhase {
+        switch phase {
+        case .game(let game):
+            return .game(SyncGameScore(points: game.points))
+        case .setTieBreak(let tieBreak):
+            return .setTieBreak(SyncTieBreakScore(points: tieBreak.points))
+        case .matchTieBreak(let tieBreak):
+            return .matchTieBreak(SyncTieBreakScore(points: tieBreak.points))
+        }
+    }
+
+    /// Validates and applies one Watch-originated command, returning the
+    /// authoritative outcome plus a fresh snapshot. This is the only entry
+    /// point through which the Watch can affect scoring, and it never gives
+    /// the Watch authority: every mutation still runs through the same engine
+    /// submission and persistence the phone itself uses.
+    ///
+    /// Commands are never queued. A command is either applied and durably
+    /// saved before `.accepted` is returned, recognized as already applied,
+    /// or rejected with an explicit reason.
+    func applyRemoteCommand(_ command: SyncCommand) -> SyncCommandResponse {
+        switch command.kind {
+        case .requestLatestState:
+            // A pure read: no mutation, no ledger access, valid in any phase,
+            // and `matchID` is advisory only — a freshly launched Watch that
+            // has never seen a snapshot can still ask what the truth is.
+            return response(for: command, outcome: .accepted, acknowledged: true)
+
+        case .recordPoint(let team):
+            return applyRemoteScoringCommand(command, event: .pointWon(PointWonEvent(winningTeam: team)))
+
+        case .undo:
+            return applyRemoteScoringCommand(command, event: nil)
+        }
+    }
+
+    /// Shared validation and application for the two mutating command kinds.
+    /// `event` is `nil` for undo, whose target can only be resolved after the
+    /// active match has been validated.
+    private func applyRemoteScoringCommand(
+        _ command: SyncCommand,
+        event: ScoringEvent?
+    ) -> SyncCommandResponse {
+        // a. Required fields.
+        guard let commandMatchID = command.matchID else {
+            return response(for: command, outcome: .rejected(.malformedCommand))
+        }
+
+        // b. Durable receipts first, so a command whose match has already
+        //    finished or been discarded is still recognized. A read failure
+        //    is reported as such — never silently treated as "not found",
+        //    which would risk applying a duplicate.
+        do {
+            if try commandReceiptStore.contains(matchID: commandMatchID, commandID: command.commandID) {
+                return response(for: command, outcome: .alreadyApplied, acknowledged: true)
+            }
+        } catch {
+            return response(for: command, outcome: .rejected(.persistenceFailed))
+        }
+
+        // c. Active ledger, scoped to the current match so an ID belonging to
+        //    a different match can never short-circuit this one.
+        if commandMatchID == matchID, processedCommandIDs.contains(command.commandID) {
+            return response(for: command, outcome: .alreadyApplied, acknowledged: true)
+        }
+
+        // d. An active match must exist, and must be the one addressed.
+        guard let currentEngine = engine, let activeMatchID = matchID else {
+            return response(for: command, outcome: .rejected(.noLiveMatch))
+        }
+        guard commandMatchID == activeMatchID else {
+            return response(for: command, outcome: .rejected(.wrongMatch))
+        }
+
+        // e. Live and not terminal.
+        if case .finished = phase {
+            return response(for: command, outcome: .rejected(.matchFinished))
+        }
+        guard case .live = phase else {
+            return response(for: command, outcome: .rejected(.noLiveMatch))
+        }
+        guard !currentEngine.state.isTerminal else {
+            return response(for: command, outcome: .rejected(.matchFinished))
+        }
+
+        // Once a winner exists but the log is not yet closed, further points
+        // are refused while undo stays available, so an accidental
+        // match-ending point can still be corrected.
+        if event != nil, currentEngine.state.matchWinner != nil {
+            return response(for: command, outcome: .rejected(.matchFinished))
+        }
+
+        // f. Revision must match exactly; a behind Watch gets an explicit
+        //    rejection plus a fresh snapshot rather than a silent correction.
+        guard command.expectedStateRevision == currentEngine.events.count else {
+            return response(for: command, outcome: .rejected(.staleRevision))
+        }
+
+        // g. Resolve undo's target now that the match is known-valid.
+        let resolvedEvent: ScoringEvent
+        if let event {
+            resolvedEvent = event
+        } else {
+            guard let targetID = Self.lastEffectivePointID(in: currentEngine.events) else {
+                return response(for: command, outcome: .rejected(.invalidUndo))
+            }
+            resolvedEvent = .undo(UndoEvent(targetEventID: targetID))
+        }
+
+        // h. Apply atomically.
+        return applyAtomically(command, event: resolvedEvent)
+    }
+
+    /// Mutates, records the command ID, and persists both in a single save.
+    /// On any failure every touched value is restored exactly, so a retry of
+    /// the same command is a clean first attempt rather than a duplicate.
+    private func applyAtomically(_ command: SyncCommand, event: ScoringEvent) -> SyncCommandResponse {
+        let previousEngine = engine
+        let previousPhase = phase
+        let previousProcessedCommandIDs = processedCommandIDs
+        let previousSessionError = sessionError
+
+        if case .failure(let error) = applyScoringEvent(event) {
+            return response(for: command, outcome: .rejected(Self.rejectionReason(for: error)))
+        }
+        processedCommandIDs.insert(command.commandID)
+
+        do {
+            try persistOrThrow()
+        } catch {
+            engine = previousEngine
+            phase = previousPhase
+            processedCommandIDs = previousProcessedCommandIDs
+            sessionError = previousSessionError
+            return response(for: command, outcome: .rejected(.persistenceFailed))
+        }
+
+        return response(for: command, outcome: .accepted, acknowledged: true)
+    }
+
+    /// Maps a scoring-application failure onto the wire rejection reason,
+    /// keeping the engine's own verdicts distinct from local preconditions
+    /// and internal invariant breaches.
+    private static func rejectionReason(for error: ScoringApplicationError) -> SyncRejectionReason {
+        switch error {
+        case .noActiveEngine:
+            return .noLiveMatch
+        case .unexpectedEventCount:
+            return .malformedCommand
+        case .engineRejected(let matchError):
+            switch matchError {
+            case .matchAlreadyDecided, .matchAlreadyFinished:
+                return .matchFinished
+            case .undoTargetNotFound, .undoTargetAlreadyUndone, .undoTargetNotMostRecent:
+                return .invalidUndo
+            case .duplicateEventID, .invalidConfiguration, .matchNotYetDecided:
+                return .malformedCommand
+            }
+        }
+    }
+
+    private func response(
+        for command: SyncCommand,
+        outcome: SyncCommandOutcome,
+        acknowledged: Bool = false
+    ) -> SyncCommandResponse {
+        SyncCommandResponse(
+            commandID: command.commandID,
+            outcome: outcome,
+            snapshot: currentSnapshot(lastAcknowledgedCommandID: acknowledged ? command.commandID : nil)
+        )
     }
 
     static func lastEffectivePointID(in events: [ScoringEvent]) -> EventID? {

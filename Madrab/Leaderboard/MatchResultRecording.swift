@@ -14,9 +14,14 @@ final class MatchResultRecorder: MatchResultRecording {
     private let store: LeaderboardStore
     private let formula: PointsFormula
 
-    init(store: LeaderboardStore = LeaderboardStore(), formula: PointsFormula = .default) {
-        self.store = store
-        self.formula = formula
+    /// Dependencies default to `nil` rather than to concrete instances
+    /// because a default-argument expression is evaluated in a nonisolated
+    /// context, where referencing these main-actor-isolated values would
+    /// warn. Resolving them inside this `@MainActor` body is equivalent for
+    /// every caller, including tests that inject a temporary store.
+    init(store: LeaderboardStore? = nil, formula: PointsFormula? = nil) {
+        self.store = store ?? LeaderboardStore()
+        self.formula = formula ?? .default
     }
 
     func recordCompletedMatch(matchID: UUID, winnerProfileID: UUID, loserProfileID: UUID) throws {
