@@ -15,11 +15,17 @@ final class AppEnvironment {
     let session: MatchSessionViewModel
     let profilesViewModel: ProfilesViewModel
     let leaderboardViewModel: LeaderboardViewModel
+    /// One Watch-sync service for the app's lifetime, wired to the very same
+    /// `MatchSessionViewModel` the Match tab drives. There is deliberately no
+    /// second session, store, or recorder behind it.
+    let phoneSyncService: PhoneSyncService
 
     init(
         matchStore: MatchStore? = nil,
         profileStore: ProfileStore? = nil,
-        leaderboardStore: LeaderboardStore? = nil
+        leaderboardStore: LeaderboardStore? = nil,
+        commandReceiptStore: CommandReceipting? = nil,
+        connectivitySession: PhoneConnectivitySession? = nil
     ) {
         let resolvedMatchStore = matchStore ?? MatchStore()
         let resolvedProfileStore = profileStore ?? ProfileStore()
@@ -34,7 +40,15 @@ final class AppEnvironment {
         self.resultRecorder = recorder
         self.statsPurger = purger
 
-        self.session = MatchSessionViewModel(store: resolvedMatchStore, resultRecorder: recorder)
+        // `commandReceiptStore` is passed straight through: `nil` leaves
+        // `MatchSessionViewModel` to resolve its own `CommandReceiptStore`,
+        // exactly as before, while a test can supply an isolated one.
+        let matchSession = MatchSessionViewModel(
+            store: resolvedMatchStore,
+            resultRecorder: recorder,
+            commandReceiptStore: commandReceiptStore
+        )
+        self.session = matchSession
         self.profilesViewModel = ProfilesViewModel(
             store: resolvedProfileStore,
             activeMatchStore: resolvedMatchStore,
@@ -43,6 +57,10 @@ final class AppEnvironment {
         self.leaderboardViewModel = LeaderboardViewModel(
             leaderboardStore: resolvedLeaderboardStore,
             profileStore: resolvedProfileStore
+        )
+        self.phoneSyncService = PhoneSyncService(
+            session: connectivitySession ?? LivePhoneConnectivitySession(),
+            matchSession: matchSession
         )
     }
 }

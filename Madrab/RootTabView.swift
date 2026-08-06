@@ -25,5 +25,10 @@ struct RootTabView: View {
                 }
         }
         .tint(.accentColor)
+        // Activated once for the app's lifetime. Deliberately here rather than
+        // in the Match tab: the phone must answer the Watch regardless of
+        // which tab is on screen. `activate()` is idempotent, so a repeated
+        // `.task` is harmless.
+        .task { environment.phoneSyncService.activate() }
     }
 }
